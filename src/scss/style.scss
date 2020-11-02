@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+$gen-padding: 1rem;
+$head-bgcolor: #113b68bd;
+$gen-fontsize: 1.5rem;
 
 * {
   margin: 0;
@@ -10,25 +13,80 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2.5px;
-  background-color: #113b68bd;
-  overflow: hidden;
+  padding: 0.2rem;
+  background-color: $head-bgcolor;
+  overflow: auto;
 
   h1 {
     text-align: center;
     color: white;
-    font-family: Lato;
-    font-size: 25px;
+    font-family: 'Fira Sans', monospace;
+    font-size: 1.5rem;
   }
 }
 
 .wrapper {
   position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 300px;
-  padding: 2px;
-  background-color: grey;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: fit-content;
+  max-width: 40rem;
+  min-height: min-content;
+  max-height: 45rem;
+  background-color: #113b687e;
+  border-radius: 0.5rem;
+  overflow: auto;
+  .quote {
+    padding: $gen-padding;
+    font-family: 'Fira Sans';
+    #quote-txt {
+      font-size: $gen-fontsize * 2;
+      font-weight: bolder;
+      color: white;
+    }
+    #quote-auth {
+      margin-top: 0.2rem;
+      text-align: right;
+      font-weight: bold;
+      font-size: $gen-fontsize * 1.2;
+      color: white;
+    }
+    #quote-img {
+      display: inline;
+      padding: $gen-padding;
+    }
+  }
+  hr {
+    position: relative;
+    top: 85%;
+    border: 2px solid white;
+    width: fit-content;
+    padding: 0;
+  }
+  .quote-change {
+    position: relative;
+    top: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0.5rem;
+    cursor: pointer;
+    button {
+      font-size: $gen-fontsize;
+      font-family: 'Fira Sans', monospace;
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: inherit;
+    }
+  }
+  .quote-change:hover {
+    background-color: #14437648;
+  }
+  .quote-change:active {
+    background-color: #113b687e;
+  }
 }
