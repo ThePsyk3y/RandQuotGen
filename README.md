@@ -1,2 +1,2 @@
 # RandQuotGen
-A Web Application Fetches a Random Quote and Displays it.
+A Web Application that fetches a random quote and displays it.
